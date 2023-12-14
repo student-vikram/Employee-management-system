@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1 Edit Employee
+  form(action=`/editEmployee/${employee._id}` method='post')
+    label(for='name') Name:
+    input(type='text' name='name' value=employee.name required)
+    br
+    br
+    br
+    label(for='position') Position:
+    input(type='text' name='position' value=employee.position required)
+    br
+    br
+    br
+    label(for='department') Department:
+    input(type='text' name='department' value=employee.department required)
+    br
+    br
+    br
+    input(type='submit' value='Save Changes')

@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1 Employee List
+  table
+    thead
+      tr
+        th Name
+        th Position
+        th Department
+        th Actions
+    tbody
+      each employee in employees
+        tr
+          td= employee.name
+          td= employee.position
+          td= employee.department
+          td
+            a(href=`/employeeDetail/${employee._id}`) View
+            span | 
+            a(href=`/editEmployee/${employee._id}`) Edit

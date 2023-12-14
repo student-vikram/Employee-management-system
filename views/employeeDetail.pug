@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 Employee Detail
+  p
+    strong Name:
+    |  #{employee.name}
+  p
+    strong Position:
+    |  #{employee.position}
+  p
+    strong Department:
+    |  #{employee.department}
+  p
+    a(href='/employees') Back to Employees
